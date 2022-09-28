@@ -1,0 +1,83 @@
+[{
+    "name":"franciscojoaopedro",
+     "email":"francisco@gmail.com",
+     "senha":123,
+     "idade":20,
+     "cor_olhos":"preto",
+     "status":true,
+     "habilidades":["programar","comunicação","visualisar"],
+     "outros":{
+       "cor":"branco","altura":12,"peso":70
+     }
+ }
+ ,
+ {
+    "name": "ngunga",
+     "email": "ngunga@gmail.com",
+     "senha": "123",
+     "idade": 21,
+     "cor_olhos": "verde",
+     "status": true,
+     "habilidades": ["programar", "comunicação", "visualisar"],
+     "outros": {
+         "cor": "branco",
+         "altura": 12,
+         "peso": 70
+     }
+ },
+ {
+    "name":"marc",
+     "email":"marc@gmail.com",
+     "senha":123,
+     "idade":20,
+     "cor_olhos":"preto",
+     "status":true,
+     "habilidades":["programar","comunicação","visualisar"],
+     "outros":{
+       "cor":"branco","altura":12,"peso":70
+     }
+ }
+ ,
+ {
+    "name": "pedro",
+     "email": "pedro@gmail.com",
+     "senha": "123",
+     "idade": 21,
+     "cor_olhos": "azul",
+     "status": true,
+     "habilidades": ["programar", "comunicação", "visualisar"],
+     "outros": {
+         "cor": "branco",
+         "altura": 12,
+         "peso": 70
+     }
+ }
+ 
+ ]
+
+
+
+
+
+
+
+ {
+    "modelo": "l200 vg",
+    "placa": "wugguwu",
+    "cor": "branco",
+    "fabricante": "mict",
+ }
+
+{
+    "modelo": "prado vx",
+    "placa": "ssss",
+    "cor": "preto",
+    "fabricante": "toyota",
+}
+
+{
+    "modelo": "i10 vx",
+    "placa": "1010i",
+    "cor": "preto",
+    "fabricante": "hyundai",
+}

@@ -15,7 +15,7 @@ const Usuario=mongoose.model("Usuario",{
     idade:Number,
     cor_olhos:{
         type:String,
-        enum:["azul","preto","marron","verde"],
+        enum:['azul','preto','marron','verde'],
         required:true
     },
     status:Boolean,
