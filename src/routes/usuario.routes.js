@@ -1,5 +1,6 @@
 const express=require("express");
 const mongoose=require("mongoose");
+const Carro = require("../models/carro");
 const route=express.Router();
 
 const Usuario=require("../models/usuario");
@@ -23,13 +24,26 @@ route.get("/",async(req,res)=>{
     }
 })
 
-route.get("/:id", async(req,res)=>{
-    try{
-        const id=req.params.id;
+// route.get("/:id", async(req,res)=>{
+//     try{
+//         const id=req.params.id;
+//         const usuario= await Usuario.findById(id);
+//         res.json({error:false, usuario});
+//     }catch(err){
+//         res.json({error:true,message:err.message})
+//     }
+// })
+
+route.get("/:id", async (req,res)=>{
+    try {
+        const id= req.params.id;
         const usuario= await Usuario.findById(id);
-        res.json({error:false, usuario});
-    }catch(err){
-        res.json({error:true,message:err.message})
+        const carros = await Carro.find({usuario_id:id});
+
+        res.json({error:false, usuario:{...usuario._doc,carros}})
+
+    } catch (err) {
+        res.json({error:true, message:err.message})
     }
 })
 
