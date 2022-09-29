@@ -12,7 +12,46 @@ route.post("/",async (req,res)=>{
     }catch(err){
         res.json({error:true, message:err.message})
     }
+});
+
+route.get("/",async(req,res)=>{
+    try{
+        const usuario=await  Usuario.find();
+        res.json({error:false,usuario})
+    }catch(err){
+        res.json({error:true,message:err.message})
+    }
 })
 
+route.get("/:id", async(req,res)=>{
+    try{
+        const id=req.params.id;
+        const usuario= await Usuario.findById(id);
+        res.json({error:false, usuario});
+    }catch(err){
+        res.json({error:true,message:err.message})
+    }
+})
+
+route.put("/:id", async  (req,res)=>{
+    try{
+        const id=req.params.id;
+        const usuario= await Usuario.findByIdAndUpdate(id,req.body,{new:true})
+        res.json({error:false, usuario})
+    }catch(err){
+        res.json({error:true, message:err.message})
+    }
+})
+
+route.delete("/:id", async (req,res)=>{
+    try{
+        const id=req.params.id;
+        await Usuario.findByIdAndDelete(id);
+        res.json({error:true, message:"usuario deletado"})
+        
+    }catch(err){
+        res.json({error:true,message:err.message})
+    }
+})
 
 module.exports=route;
